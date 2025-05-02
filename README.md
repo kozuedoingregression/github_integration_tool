@@ -3,7 +3,61 @@
 This is a Naptha tool module for for interacting with GitHub repositories, including fetching
 file contents, indexing repository files, and searching through indexed content. Tool modules can be run independently or used by agents.
 
-## Usage
+## 🔧 Usage
+
+Run the tool with the following command format:
+
+```
+naptha run tool:github_integration_tool -p "tool_name='<TOOL_NAME>' repo_url='<REPO_URL>' [additional_parameters]"
+```
+
+### Available Commands
+
+---
+
+### 1. `get_file_content`
+
+Fetch the contents of a specific file from a GitHub repository.
+
+```
+naptha run tool:github_integration_tool -p "tool_name='get_file_content' repo_url='' file_path=''"
+```
+
+### 2. `get_directory_structure`
+
+Return the directory structure of a GitHub repository.
+
+```
+naptha run tool:github_integration_tool -p "tool_name='get_directory_structure' repo_url=''"
+```
+
+### 3. `index_repo_file`
+
+Index a specific file to enable faster search and referencing.
+
+```
+naptha run tool:github_integration_tool -p "tool_name='index_repo_file' repo_url='' file_path=''"
+```
+
+### 4. `search_repo`
+
+Search for a specific query string in a file within the repository.
+
+```
+naptha run tool:github_integration_tool -p "tool_name='search_repo' repo_url='' file_path='' query=''"
+```
+
+
+### 5. `clear_cache`
+
+Clear any cached data related to the given repository.
+
+```
+naptha run tool:github_integration_tool -p "tool_name='clear_cache' repo_url=''"
+```
+
+Replace the empty values with your actual repository URL, file paths, and search queries as needed.
+
 
 ## 🏗 Creating a new Naptha Module
 
